@@ -17,8 +17,8 @@ export class ContentResolver {
   }
 
   @Query('content')
-  findOne(@Args('id') id: number) {
-    return this.contentService.findOne(id);
+  findOne(@Args('slug') slug: string) {
+    return this.contentService.findOne(slug);
   }
 
   @Mutation('updateContent')

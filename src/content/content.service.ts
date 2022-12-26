@@ -22,9 +22,9 @@ export class ContentService {
     });
   }
 
-  findOne(id: number) {
-    return this.prisma.content.findUnique({
-      where: { id },
+  findOne(slug: string) {
+    return this.prisma.content.findFirst({
+      where: { slug },
       include: {
         slices: true,
       },

@@ -62,7 +62,7 @@ export class Content {
 export abstract class IQuery {
     abstract contents(): Nullable<Content>[] | Promise<Nullable<Content>[]>;
 
-    abstract content(id: number): Nullable<Content> | Promise<Nullable<Content>>;
+    abstract content(slug: string): Nullable<Content> | Promise<Nullable<Content>>;
 
     abstract dogs(): Nullable<Dog>[] | Promise<Nullable<Dog>[]>;
 
