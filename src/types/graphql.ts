@@ -29,14 +29,6 @@ export class UpdateDogInput {
     name: string;
 }
 
-export class CreateDonationInput {
-    exampleField?: Nullable<number>;
-}
-
-export class UpdateDonationInput {
-    id: number;
-}
-
 export class CreateOwnerInput {
     name: string;
 }
@@ -76,10 +68,6 @@ export abstract class IQuery {
 
     abstract dog(id: number): Nullable<Dog> | Promise<Nullable<Dog>>;
 
-    abstract donations(): Nullable<Donation>[] | Promise<Nullable<Donation>[]>;
-
-    abstract donation(id: number): Nullable<Donation> | Promise<Nullable<Donation>>;
-
     abstract owners(): Nullable<Owner>[] | Promise<Nullable<Owner>[]>;
 
     abstract owner(id: number): Nullable<Owner> | Promise<Nullable<Owner>>;
@@ -102,12 +90,6 @@ export abstract class IMutation {
 
     abstract removeDog(id: number): Nullable<Dog> | Promise<Nullable<Dog>>;
 
-    abstract createDonation(createDonationInput: CreateDonationInput): Donation | Promise<Donation>;
-
-    abstract updateDonation(updateDonationInput: UpdateDonationInput): Donation | Promise<Donation>;
-
-    abstract removeDonation(id: number): Nullable<Donation> | Promise<Nullable<Donation>>;
-
     abstract createOwner(createOwnerInput: CreateOwnerInput): Owner | Promise<Owner>;
 
     abstract updateOwner(updateOwnerInput: UpdateOwnerInput): Owner | Promise<Owner>;
@@ -124,10 +106,6 @@ export abstract class IMutation {
 export class Dog {
     id: number;
     name: string;
-}
-
-export class Donation {
-    exampleField?: Nullable<number>;
 }
 
 export class Owner {

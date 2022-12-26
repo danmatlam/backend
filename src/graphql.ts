@@ -1,4 +1,3 @@
-
 /*
  * -------------------------------------------------------
  * THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
@@ -9,137 +8,157 @@
 /* eslint-disable */
 
 export class CreateContentInput {
-    slug?: Nullable<string>;
-    name?: Nullable<string>;
+  slug?: Nullable<string>;
+  name?: Nullable<string>;
 }
 
 export class UpdateContentInput {
-    id: number;
-    slug?: Nullable<string>;
-    name?: Nullable<string>;
+  id: number;
+  slug?: Nullable<string>;
+  name?: Nullable<string>;
 }
 
 export class CreateDogInput {
-    name: string;
-    ownerId?: Nullable<number>;
+  name: string;
+  ownerId?: Nullable<number>;
 }
 
 export class UpdateDogInput {
-    id: number;
-    name: string;
+  id: number;
+  name: string;
 }
 
 export class CreateDonationInput {
-    exampleField?: Nullable<number>;
+  exampleField?: Nullable<number>;
 }
 
 export class UpdateDonationInput {
-    id: number;
+  id: number;
 }
 
 export class CreateOwnerInput {
-    name: string;
+  name: string;
 }
 
 export class UpdateOwnerInput {
-    name: string;
+  name: string;
 }
 
 export class CreateSliceInput {
-    contentId: number;
-    markdown: string;
-    order?: Nullable<number>;
+  contentId: number;
+  markdown: string;
+  order?: Nullable<number>;
 }
 
 export class UpdateSliceInput {
-    id: number;
-    contentId?: Nullable<number>;
-    markdown?: Nullable<string>;
-    order?: Nullable<number>;
+  id: number;
+  contentId?: Nullable<number>;
+  markdown?: Nullable<string>;
+  order?: Nullable<number>;
 }
 
 export class Content {
-    id: number;
-    slug?: Nullable<string>;
-    name?: Nullable<string>;
-    slices?: Nullable<Nullable<Slice>[]>;
+  id: number;
+  slug?: Nullable<string>;
+  name?: Nullable<string>;
+  slices?: Nullable<Nullable<Slice>[]>;
 }
 
 export abstract class IQuery {
-    abstract contents(): Nullable<Content>[] | Promise<Nullable<Content>[]>;
+  abstract contents(): Nullable<Content>[] | Promise<Nullable<Content>[]>;
 
-    abstract content(id: number): Nullable<Content> | Promise<Nullable<Content>>;
+  abstract content(id: number): Nullable<Content> | Promise<Nullable<Content>>;
 
-    abstract dogs(): Nullable<Dog>[] | Promise<Nullable<Dog>[]>;
+  abstract dogs(): Nullable<Dog>[] | Promise<Nullable<Dog>[]>;
 
-    abstract dog(id: number): Nullable<Dog> | Promise<Nullable<Dog>>;
+  abstract dog(id: number): Nullable<Dog> | Promise<Nullable<Dog>>;
 
-    abstract donations(): Nullable<Donation>[] | Promise<Nullable<Donation>[]>;
+  abstract donation(
+    id: number,
+  ): Nullable<Donation> | Promise<Nullable<Donation>>;
 
-    abstract donation(id: number): Nullable<Donation> | Promise<Nullable<Donation>>;
+  abstract owners(): Nullable<Owner>[] | Promise<Nullable<Owner>[]>;
 
-    abstract owners(): Nullable<Owner>[] | Promise<Nullable<Owner>[]>;
+  abstract owner(id: number): Nullable<Owner> | Promise<Nullable<Owner>>;
 
-    abstract owner(id: number): Nullable<Owner> | Promise<Nullable<Owner>>;
+  abstract slices(): Nullable<Slice>[] | Promise<Nullable<Slice>[]>;
 
-    abstract slices(): Nullable<Slice>[] | Promise<Nullable<Slice>[]>;
-
-    abstract slice(id: number): Nullable<Slice> | Promise<Nullable<Slice>>;
+  abstract slice(id: number): Nullable<Slice> | Promise<Nullable<Slice>>;
 }
 
 export abstract class IMutation {
-    abstract createContent(createContentInput: CreateContentInput): Content | Promise<Content>;
+  abstract createContent(
+    createContentInput: CreateContentInput,
+  ): Content | Promise<Content>;
 
-    abstract updateContent(updateContentInput: UpdateContentInput): Content | Promise<Content>;
+  abstract updateContent(
+    updateContentInput: UpdateContentInput,
+  ): Content | Promise<Content>;
 
-    abstract removeContent(id: number): Nullable<Content> | Promise<Nullable<Content>>;
+  abstract removeContent(
+    id: number,
+  ): Nullable<Content> | Promise<Nullable<Content>>;
 
-    abstract createDog(createDogInput: CreateDogInput): Dog | Promise<Dog>;
+  abstract createDog(createDogInput: CreateDogInput): Dog | Promise<Dog>;
 
-    abstract updateDog(updateDogInput: UpdateDogInput): Dog | Promise<Dog>;
+  abstract updateDog(updateDogInput: UpdateDogInput): Dog | Promise<Dog>;
 
-    abstract removeDog(id: number): Nullable<Dog> | Promise<Nullable<Dog>>;
+  abstract removeDog(id: number): Nullable<Dog> | Promise<Nullable<Dog>>;
 
-    abstract createDonation(createDonationInput: CreateDonationInput): Donation | Promise<Donation>;
+  abstract createDonation(
+    createDonationInput: CreateDonationInput,
+  ): Donation | Promise<Donation>;
 
-    abstract updateDonation(updateDonationInput: UpdateDonationInput): Donation | Promise<Donation>;
+  abstract updateDonation(
+    updateDonationInput: UpdateDonationInput,
+  ): Donation | Promise<Donation>;
 
-    abstract removeDonation(id: number): Nullable<Donation> | Promise<Nullable<Donation>>;
+  abstract removeDonation(
+    id: number,
+  ): Nullable<Donation> | Promise<Nullable<Donation>>;
 
-    abstract createOwner(createOwnerInput: CreateOwnerInput): Owner | Promise<Owner>;
+  abstract createOwner(
+    createOwnerInput: CreateOwnerInput,
+  ): Owner | Promise<Owner>;
 
-    abstract updateOwner(updateOwnerInput: UpdateOwnerInput): Owner | Promise<Owner>;
+  abstract updateOwner(
+    updateOwnerInput: UpdateOwnerInput,
+  ): Owner | Promise<Owner>;
 
-    abstract removeOwner(id: number): Nullable<Owner> | Promise<Nullable<Owner>>;
+  abstract removeOwner(id: number): Nullable<Owner> | Promise<Nullable<Owner>>;
 
-    abstract createSlice(createSliceInput: CreateSliceInput): Slice | Promise<Slice>;
+  abstract createSlice(
+    createSliceInput: CreateSliceInput,
+  ): Slice | Promise<Slice>;
 
-    abstract updateSlice(updateSliceInput: UpdateSliceInput): Slice | Promise<Slice>;
+  abstract updateSlice(
+    updateSliceInput: UpdateSliceInput,
+  ): Slice | Promise<Slice>;
 
-    abstract removeSlice(id: number): Nullable<Slice> | Promise<Nullable<Slice>>;
+  abstract removeSlice(id: number): Nullable<Slice> | Promise<Nullable<Slice>>;
 }
 
 export class Dog {
-    id: number;
-    name: string;
+  id: number;
+  name: string;
 }
 
 export class Donation {
-    exampleField?: Nullable<number>;
+  exampleField?: Nullable<number>;
 }
 
 export class Owner {
-    id: number;
-    name: string;
-    dogs: Nullable<Dog>[];
+  id: number;
+  name: string;
+  dogs: Nullable<Dog>[];
 }
 
 export class Slice {
-    id: number;
-    contentId?: Nullable<number>;
-    content?: Nullable<Content>;
-    markdown: string;
-    order?: Nullable<number>;
+  id: number;
+  contentId?: Nullable<number>;
+  content?: Nullable<Content>;
+  markdown: string;
+  order?: Nullable<number>;
 }
 
 type Nullable<T> = T | null;

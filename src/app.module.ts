@@ -7,7 +7,6 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { PrismaModule } from './prisma/prisma.module';
 import { OwnerModule } from './owner/owner.module';
-import { DonationsModule } from './donations/donations.module';
 import { ContentModule } from './content/content.module';
 import { DogModule } from './dog/dog.module';
 import { SliceModule } from './slice/slice.module';
@@ -27,7 +26,6 @@ import { SliceModule } from './slice/slice.module';
     PrismaModule,
     DogModule,
     OwnerModule,
-    DonationsModule,
     ContentModule,
     SliceModule,
   ],
