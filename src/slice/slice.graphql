@@ -1,0 +1,37 @@
+type Slice {
+  id: Int!
+  contentId: Int
+  content: Content
+  markdown: String!
+  text: String!
+  order: Int
+}
+
+input CreateSliceInput {
+  # id: Int!
+  contentId: Int!
+  # content: Content
+  markdown: String!
+  text: String!
+  order: Int
+}
+
+input UpdateSliceInput {
+  id: Int!
+  contentId: Int
+  # content: Content
+  markdown: String
+  text: String
+  order: Int
+}
+
+type Query {
+  slices: [Slice]!
+  slice(id: Int!): Slice
+}
+
+type Mutation {
+  createSlice(createSliceInput: CreateSliceInput!): Slice!
+  updateSlice(updateSliceInput: UpdateSliceInput!): Slice!
+  removeSlice(id: Int!): Slice
+}

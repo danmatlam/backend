@@ -1,3 +1,24 @@
+## Editar prisma model
+
+## Ejecutar comando prisma para correr migracion
+
+`npx prisma migrate dev --name owner`
+
+## Generar recurso de next
+
+`nest generate resource owner`
+
+## Editar owner.graphql
+
+## Levantar proyecto para generar los graphql/types
+
+- Importar graphql/types en owner.graph.resolver.ts
+- Editar graphql/types en owner.graph.service.ts
+
+## Extender clase prisma y escribir consultas
+
+- owner.graph.service.ts
+
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
 </p>

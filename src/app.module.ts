@@ -6,7 +6,11 @@ import { join } from 'path';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { PrismaModule } from './prisma/prisma.module';
+import { OwnerModule } from './owner/owner.module';
+import { DonationsModule } from './donations/donations.module';
+import { ContentModule } from './content/content.module';
 import { DogModule } from './dog/dog.module';
+import { SliceModule } from './slice/slice.module';
 
 @Module({
   imports: [
@@ -22,6 +26,10 @@ import { DogModule } from './dog/dog.module';
     }),
     PrismaModule,
     DogModule,
+    OwnerModule,
+    DonationsModule,
+    ContentModule,
+    SliceModule,
   ],
   controllers: [AppController],
   providers: [AppService],

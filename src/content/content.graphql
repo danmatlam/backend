@@ -1,0 +1,28 @@
+type Content {
+  id: Int!
+  slug: String
+  name: String
+  slices: [Slice]
+}
+
+input CreateContentInput {
+  slug: String
+  name: String
+}
+
+input UpdateContentInput {
+  id: Int!
+  slug: String
+  name: String
+}
+
+type Query {
+  contents: [Content]!
+  content(id: Int!): Content
+}
+
+type Mutation {
+  createContent(createContentInput: CreateContentInput!): Content!
+  updateContent(updateContentInput: UpdateContentInput!): Content!
+  removeContent(id: Int!): Content
+}

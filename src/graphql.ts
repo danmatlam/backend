@@ -48,7 +48,6 @@ export class UpdateOwnerInput {
 export class CreateSliceInput {
     contentId: number;
     markdown: string;
-    text: string;
     order?: Nullable<number>;
 }
 
@@ -56,7 +55,6 @@ export class UpdateSliceInput {
     id: number;
     contentId?: Nullable<number>;
     markdown?: Nullable<string>;
-    text?: Nullable<string>;
     order?: Nullable<number>;
 }
 
@@ -141,7 +139,6 @@ export class Slice {
     contentId?: Nullable<number>;
     content?: Nullable<Content>;
     markdown: string;
-    text: string;
     order?: Nullable<number>;
 }
 
